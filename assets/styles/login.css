@@ -1,0 +1,130 @@
+.colored :first-child {
+  color: orange;
+}
+.frame {
+  background: lightslategray;
+  border-radius: 5px;
+  padding: 15px;
+  color: #eee;
+}
+pre {
+  margin: 25px;
+  padding: 25px;
+}
+kbd {
+  background-color: lightslategray;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 0.9em;
+  font-weight: 400;
+  margin: 10px;
+  padding: 4px;
+  white-space: nowrap;
+}
+kbd:first-of-type {
+  background-color: #ffb733;
+  margin-left: 0px;
+}
+.container-fluid {
+  background: lightslategray;
+  clear: both;
+  margin: -10px;
+  padding: 25px;
+}
+.no-select {
+  -moz-user-select: none;
+  /* Firefox 2+ */
+  -ms-user-select: none;
+  /* IE 10+ */
+  -webkit-user-select: none;
+  /* Safari 3.1+ */
+  user-select: none;
+  /* Standard syntax */
+}
+form {
+  margin: 50px;
+  padding: 25px;
+  width: 300px;
+  background-color: lightsteelblue;
+  border-color: #2c2c2c;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+.result {
+  color: #005580;
+}
+a.btn {
+  display: block;
+  cursor: pointer;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  background: #0088cc;
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  width: 100px;
+}
+.result:target {
+  color: #580308;
+}
+.centered,
+header h1 {
+  clear: both;
+  margin: 0 auto;
+  width: 100%;
+}
+@media not (max-width: 991px) {
+  .centered,
+  header h1 {
+    width: 50%;
+  }
+}
+header {
+  margin: 0;
+  padding: 0;
+}
+header h1 {
+  color: #339bb9;
+  text-align: center;
+  margin: 10px auto;
+}
+article {
+  margin: 0;
+  padding: 0;
+}
+article h2 {
+  color: #339bb9;
+}
+article p {
+  font-weight: 600;
+  padding: 5px;
+  margin: 0 0 0 10px;
+}
+.inline,
+header p,
+section {
+  padding: 10px;
+  background-color: #efe;
+  border: #2c2c2c;
+  border-radius: 6px;
+}
+ul {
+  padding: 10px;
+}
+ul li {
+  display: block;
+  padding: 5px;
+  border: 1px solid #eeeeee;
+  border-bottom-width: 0;
+  background-color: #fff;
+}
+ul li:first-child {
+  border-radius: 6px 6px 0 0;
+}
+ul li:last-child {
+  border-radius: 0 0 6px 6px;
+  border-bottom-width: 1px;
+}
+/*# sourceMappingURL=login.css.map */

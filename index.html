@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="description" content="Less Bootstrap HTML Exercises">
+    <meta name="author" content="Caglar KOPARIR">
+    <link rel="stylesheet" type="text/css" href="assets/styles/normalize.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.css"/>-->
+    <!--<link rel="stylesheet" type="text/css" href="assets/styles/bootstrap-responsive.css"/>-->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"-->
+    <!--integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+    <link rel="stylesheet" type="text/css" href="assets/styles/main.css"/>
+    <title>Test HomePage</title>
+</head>
+<body>
+    <div class="centered">
+        <header></header>
+        <section></section>
+    </div>
+    <script language="JavaScript">
+        let header = document.querySelector('header');
+        let section = document.querySelector('section');
+        let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+
+        let request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+
+        request.responseType = 'json';
+        request.send();
+
+        request.onload = function () {
+            let heros = request.response;
+            populateHeader(heros);
+            showHeader(heros);
+        }
+
+        function populateHeader(jsonObj) {
+            let myH1 = document.createElement('h1');
+            myH1.textContent = jsonObj['squadName'];
+            header.appendChild(myH1);
+
+            let myPara = document.createElement('p');
+            myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // formed: ' + jsonObj['formed'];
+            header.appendChild(myPara);
+
+        }
+
+        function showHeader(jsonObj) {
+            let heros = jsonObj['members'];
+            for (let i = 0; i < heros.length; i++) {
+                let myArticle = document.createElement('article');
+                let myH2 = document.createElement('h2');
+                let myPara1 = document.createElement('p');
+                let myPara2 = document.createElement('p');
+                let myPara3 = document.createElement('p');
+                let myList = document.createElement('ul');
+
+                myH2.textContent = heros[i].name;
+                myPara1.textContent = 'Secret identity: ' + heros[i].secretIdentity;
+                myPara2.textContent = 'Age: ' + heros[i].age;
+                myPara3.textContent = 'Superpowers: ';
+
+                let superPowers = heros[i].powers;
+
+                for (let j = 0; j < superPowers.length; j++) {
+                    let listItem = document.createElement('li', {class: 'list-group-item'});
+                    listItem.textContent = superPowers[j];
+                    myList.appendChild(listItem);
+                }
+
+                myArticle.appendChild(myH2);
+                myArticle.appendChild(myPara1);
+                myArticle.appendChild(myPara2);
+                myArticle.appendChild(myPara3);
+                myArticle.appendChild(myList);
+
+                section.appendChild(myArticle);
+
+            }
+        }
+    </script>
+    <noscript>Sorry your browser does not support javascript or it's disabled...!</noscript>
+</body>
+</html>
