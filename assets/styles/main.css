@@ -1,3 +1,6 @@
+* {
+  font-family: Verdana, "Helvetica Neue", sans-serif;
+}
 .colored :first-child {
   color: orange;
 }
@@ -24,7 +27,7 @@ kbd {
 }
 kbd:first-of-type {
   background-color: #ffb733;
-  margin-left: 0px;
+  margin-left: 0;
 }
 .container-fluid {
   background: lightslategray;
@@ -55,15 +58,16 @@ form {
   color: #005580;
 }
 a.btn {
-  display: block;
+  background: #0088cc;
+  border-radius: 4px;
+  color: white;
   cursor: pointer;
+  display: block;
+  font-weight: 500;
   margin: 20px;
   padding: 10px;
   text-align: center;
-  background: #0088cc;
-  color: white;
-  font-weight: 600;
-  border-radius: 4px;
+  text-decoration: none;
   width: 100px;
 }
 .result:target {
@@ -75,13 +79,20 @@ header h1 {
   margin: 0 auto;
   width: 100%;
 }
-@media not (max-width: 991px) {
+@media (min-width: 1024px) {
   .centered,
   header h1 {
     width: 50%;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .centered,
+  header h1 {
+    width: 75%;
+  }
+}
 header {
+  font-family: Verdana, "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -127,4 +138,3 @@ ul li:last-child {
   border-radius: 0 0 6px 6px;
   border-bottom-width: 1px;
 }
-/*# sourceMappingURL=main.css.map */
