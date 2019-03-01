@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/styles/main.css">
+    <title>Learn More</title>
+</head>
+
+<body>
+    <h1>Learn more...!</h1>
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda doloremque ducimus ea et exercitationem
+            magni molestias officia quia quod! Ab accusantium alias culpa minus molestiae provident quas qui, quo
+            temporibus?</p>
+    </div>
+    <div class="centered" id="content">
+        <p>Sit quos cum ad totam a. Nobis in vitae et tenetur necessitatibus, doloremque, animi. Quo iure praesentium modi nulla unde explicabo, placeat voluptatibus? Labore cum recusandae quas at pariatur optio</p>
+    </div>
+    <form action="test.php" method="post" accept-charset="utf-8" class="centered">
+        <a class="btn" href="#" id="btnAlert">Alert</a>
+    </form>
+
+    <ul class="centered">
+        <li>test1</li>
+        <li>test2</li>
+        <li>test3</li>
+    </ul>
+
+    <script charset="utf-8" language="JavaScript" type="text/javascript">
+        console.log("Javascript is executed...!");
+        var button = document.getElementById("content");
+
+        function test() {
+            document.getElementById("content").outerHTML = "<p>Test Script<\/p>";
+        }
+
+        button.onclick = function() {
+            window.alert("This message send via script.");
+        }
+
+        //Document.onload = function () {
+        test();
+        //}
+    </script>
+</body>
+</html>
